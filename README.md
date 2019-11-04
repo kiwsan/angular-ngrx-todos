@@ -5,3 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 Work in progress
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-dcg5wc)
+
+## References
+[Reactive State for Angular](https://ngrx.io/)
+
+NgRx Store provides reactive state management for Angular apps inspired by Redux. Unify the events in your application and derive state using RxJS.
