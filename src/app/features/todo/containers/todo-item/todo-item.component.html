@@ -1,0 +1,6 @@
+<h2>Todo List</h2>
+<ul>
+    <li *ngFor="let todo of todos | async">
+        <span>{{todo.text}}</span>
+    </li>
+</ul>
