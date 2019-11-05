@@ -6,11 +6,11 @@ import {Store} from '@ngrx/store';
 import {TodosState} from '../../todo-state';
 
 @Component({
-    selector: 'app-todo-editor',
-    templateUrl: './todo-editor.component.html',
-    styleUrls: ['./todo-editor.component.scss']
+    selector: 'app-container-todo-editor',
+    templateUrl: './todo-container-editor.component.html',
+    styleUrls: ['./todo-container-editor.component.scss']
 })
-export class TodoEditorComponent implements OnInit {
+export class TodoContainerEditorComponent implements OnInit {
     todoValue = '';
 
     constructor(private store: Store<TodosState>) {

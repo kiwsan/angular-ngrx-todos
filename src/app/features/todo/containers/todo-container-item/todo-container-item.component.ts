@@ -6,11 +6,11 @@ import {TodosState} from '../../todo-state';
 import {getTodos} from '../../todo-selectors';
 
 @Component({
-    selector: 'app-todo-item',
-    templateUrl: './todo-item.component.html',
-    styleUrls: ['./todo-item.component.scss'],
+    selector: 'app-todo-container-item',
+    templateUrl: './todo-container-item.component.html',
+    styleUrls: ['./todo-container-item.component.scss'],
 })
-export class TodoItemComponent implements OnInit {
+export class TodoContainerItemComponent implements OnInit {
 
     todos: Observable<Todo[]>;
 
@@ -24,5 +24,6 @@ export class TodoItemComponent implements OnInit {
     }
 
     onToggleTodo(todo: Todo) {
+        console.log(todo);
     }
 }
