@@ -23,4 +23,6 @@ export class TodoItemComponent implements OnInit {
         console.log(this.todos);
     }
 
+    onToggleTodo(todo: Todo) {
+    }
 }

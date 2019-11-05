@@ -11,6 +11,7 @@ import {TodosState} from '../../todo-state';
     styleUrls: ['./todo-editor.component.scss']
 })
 export class TodoEditorComponent implements OnInit {
+    todoValue = '';
 
     constructor(private store: Store<TodosState>) {
     }
@@ -18,19 +19,28 @@ export class TodoEditorComponent implements OnInit {
     ngOnInit() {
     }
 
-    private addTodo(input) {
-        if (input.value.length === 0) {
-            return;
-        }
+    get isAddTodoDisabled() {
+        return this.todoValue.length < 4;
+    }
+
+    onNewTodoChange(todoValue: string) {
+        this.todoValue = todoValue;
+    }
+
+    onNewTodoClear() {
+        this.todoValue = '';
+    }
+
+    onAddTodo() {
         this.store.dispatch(
             new fromTodos.AddTodo(
                 {
-                    text: input.value,
+                    text: this.todoValue,
                     completed: false
                 } as Todo
             )
         );
 
-        input.value = '';
+        this.todoValue = '';
     }
 }

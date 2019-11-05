@@ -1,2 +1,16 @@
-<input #todo>
-<button (click)="addTodo(todo)">Add Todo</button>
+<div class="row">
+    <div class="offset-md-2 col-md-8">
+
+        <app-lg-input (keyup)="onNewTodoChange($event.target.value)"
+                      (keyup.enter)="!isAddTodoDisabled && onAddTodo()"
+                      (keyup.escape)="onNewTodoClear()"
+                      [placeholder]="'Take a todo...'"
+                      [value]="todoValue">
+
+            <app-lg-input-action (action)="onAddTodo()"
+                                 [disabled]="isAddTodoDisabled"
+                                 faIcon="plus"></app-lg-input-action>
+        </app-lg-input>
+
+    </div>
+</div>

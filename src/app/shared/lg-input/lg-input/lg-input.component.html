@@ -1,5 +1,9 @@
-<mat-card class="md__lg-input">
+<mat-card class="md__lg-input-card">
 
-    <input matInput placeholder="Take a todo..." value="todo">
+    <input (blur)="hasFocus = false" (focus)="hasFocus = true"
+           [disabled]="disabled"
+           [placeholder]="placeholder"
+           [value]="value"/>
 
+    <ng-content></ng-content>
 </mat-card>

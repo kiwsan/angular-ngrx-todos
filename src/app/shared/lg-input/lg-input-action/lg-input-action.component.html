@@ -1,1 +1,4 @@
-<p>lg-input-action works!</p>
+<button (click)="onClick()" [color]="color" [disabled]="disabled" mat-raised-button>
+    <fa-icon *ngIf="faIcon" [icon]="faIcon"></fa-icon>
+    <span *ngIf="label">{{label}}</span>
+</button>

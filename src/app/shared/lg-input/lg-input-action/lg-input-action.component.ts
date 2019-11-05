@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
-  selector: 'app-lg-input-action',
-  templateUrl: './lg-input-action.component.html',
-  styleUrls: ['./lg-input-action.component.scss']
+    selector: 'app-lg-input-action',
+    templateUrl: './lg-input-action.component.html',
+    styleUrls: ['./lg-input-action.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LgInputActionComponent implements OnInit {
+export class LgInputActionComponent {
 
-  constructor() { }
+    @Input()
+    disabled = false;
+    @Input()
+    faIcon = '';
+    @Input()
+    label = '';
+    @Input()
+    color = '';
 
-  ngOnInit() {
-  }
+    @Output()
+    action = new EventEmitter<void>();
 
+    onClick() {
+        this.action.emit();
+    }
 }

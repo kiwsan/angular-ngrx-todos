@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-lg-input',
-  templateUrl: './lg-input.component.html',
-  styleUrls: ['./lg-input.component.scss']
+    selector: 'app-lg-input',
+    templateUrl: './lg-input.component.html',
+    styleUrls: ['./lg-input.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LgInputComponent implements OnInit {
+export class LgInputComponent {
 
-  constructor() { }
+    @Input()
+    placeholder: string;
 
-  ngOnInit() {
-  }
+    @Input()
+    value = '';
+    @Input()
+    disabled = false;
 
+    hasFocus = false;
 }
