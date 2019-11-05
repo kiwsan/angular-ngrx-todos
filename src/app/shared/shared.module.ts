@@ -41,7 +41,8 @@ import {
   faLightbulb,
   faWindowMaximize,
   faStream,
-  faBook
+  faBook,
+  faClipboardCheck
 } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
@@ -79,7 +80,8 @@ library.add(
   faLightbulb,
   faWindowMaximize,
   faStream,
-  faBook
+  faBook,
+  faClipboardCheck
 );
 
 @NgModule({
