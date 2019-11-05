@@ -5,7 +5,9 @@ import {
   MatButtonModule,
   MatInputModule,
   MatCardModule,
-  MatIconModule
+  MatIconModule,
+  MatChipsModule,
+  MatMenuModule
 } from "@angular/material";
 
 import { XsInputComponent } from "./xs-input/xs-input/xs-input.component";
@@ -14,6 +16,71 @@ import { MdInputActionComponent } from "./md-input/md-input-action/md-input-acti
 import { LgInputActionComponent } from "./lg-input/lg-input-action/lg-input-action.component";
 import { LgInputComponent } from "./lg-input/lg-input/lg-input.component";
 import { MdInputComponent } from "./md-input/md-input/md-input.component";
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {
+  faBars,
+  faUserCircle,
+  faPowerOff,
+  faCog,
+  faPlayCircle,
+  faRocket,
+  faPlus,
+  faEdit,
+  faTrash,
+  faTimes,
+  faCaretUp,
+  faCaretDown,
+  faExclamationTriangle,
+  faFilter,
+  faTasks,
+  faCheck,
+  faSquare,
+  faLanguage,
+  faPaintBrush,
+  faLightbulb,
+  faWindowMaximize,
+  faStream,
+  faBook
+} from "@fortawesome/free-solid-svg-icons";
+import {
+  faGithub,
+  faMediumM,
+  faTwitter,
+  faInstagram,
+  faYoutube
+} from "@fortawesome/free-brands-svg-icons";
+
+library.add(
+  faBars,
+  faUserCircle,
+  faPowerOff,
+  faCog,
+  faRocket,
+  faPlayCircle,
+  faGithub,
+  faMediumM,
+  faTwitter,
+  faInstagram,
+  faYoutube,
+  faPlus,
+  faEdit,
+  faTrash,
+  faTimes,
+  faCaretUp,
+  faCaretDown,
+  faExclamationTriangle,
+  faFilter,
+  faTasks,
+  faCheck,
+  faSquare,
+  faLanguage,
+  faPaintBrush,
+  faLightbulb,
+  faWindowMaximize,
+  faStream,
+  faBook
+);
 
 @NgModule({
   declarations: [
@@ -29,8 +96,19 @@ import { MdInputComponent } from "./md-input/md-input/md-input.component";
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    MatIconModule
+    MatIconModule,
+    MatChipsModule,
+    MatMenuModule,
+    FontAwesomeModule
   ],
-  exports: [MatButtonModule, MatInputModule, MatCardModule, MatIconModule]
+  exports: [
+    MatButtonModule,
+    MatInputModule,
+    MatCardModule,
+    MatIconModule,
+    MatChipsModule,
+    MatMenuModule,
+    FontAwesomeModule
+  ]
 })
 export class SharedModule {}

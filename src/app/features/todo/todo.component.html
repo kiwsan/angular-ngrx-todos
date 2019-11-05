@@ -1,11 +1,37 @@
 <div class="row">
     <div class="offset-md-2 col-md-8">
 
-        <app-lg-input></app-lg-input>
+        <mat-card class="md__lg-input-card">
+
+            <input matInput placeholder="Take a todo...">
+
+            <button mat-raised-button color="accent">
+                <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+
+            </button>
+        </mat-card>
 
     </div>
 </div>
 
 <div class="row">
+    <h2>
+
+        <span>Todo List</span>
+        <mat-chip-list>
+            <mat-chip>Papadum</mat-chip>
+            <mat-chip>Naan</mat-chip>
+            <mat-chip>Dal</mat-chip>
+        </mat-chip-list>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+            <fa-icon icon="filter"></fa-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item>All</button>
+            <button mat-menu-item>Done</button>
+            <button mat-menu-item>Active</button>
+        </mat-menu>
+
+    </h2>
     <div class="col-md-6"></div>
 </div>
