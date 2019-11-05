@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Work in progress
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-dcg5wc)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular8-ngrx-todo)
 
 ## References
 [Reactive State for Angular](https://ngrx.io/)
