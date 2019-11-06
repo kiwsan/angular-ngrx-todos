@@ -9,7 +9,7 @@ export interface TodosState extends Todos {
 
 export const FEATURE_NAME = 'todo';
 export const reducers: ActionReducerMap<TodosState> = {
-    todos: todos.reducer
+    todos: todos.todosReducer
 };
 
 export const selectTodos = createFeatureSelector<TodosState>(

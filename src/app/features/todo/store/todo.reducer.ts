@@ -1,7 +1,7 @@
 import {Todo} from '../models/todo-model';
 import {TodoActions, TodoActionTypes} from './todo.actions';
 
-export const initialState: Array<Todo> = [
+const initialState: Array<Todo> = [
     {
         id: 1,
         text: 'Hello world!',
@@ -23,7 +23,8 @@ export const initialState: Array<Todo> = [
         completed: false
     }
 ];
-export const reducer = (state = initialState, action: TodoActions): Array<Todo> => {
+
+const reducer = (state = initialState, action: TodoActions): Array<Todo> => {
     switch (action.type) {
         case TodoActionTypes.AddTodo:
             const model = state.concat({
@@ -52,3 +53,9 @@ export const reducer = (state = initialState, action: TodoActions): Array<Todo> 
             return state;
     }
 };
+
+export function todosReducer(state: Array<Todo> | undefined, action: TodoActions) {
+    return reducer(state, action);
+}
+
+
