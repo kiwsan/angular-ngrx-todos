@@ -1,5 +1,5 @@
-<mat-card *ngFor="let todo of todos | async" class="todo">
-    <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.completed" class="todo-done"></mat-checkbox>
+<mat-card *ngFor="let todo of todos | async" class="md_todo-item">
+    <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.completed" class="md__todo-toggle"></mat-checkbox>
     <span (click)="onToggleTodo(todo)">
             &nbsp;{{todo.text}}&nbsp;
           </span>

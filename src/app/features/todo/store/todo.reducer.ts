@@ -1,7 +1,28 @@
 import {Todo} from '../models/todo-model';
 import {TodoActions, TodoActionTypes} from './todo.actions';
 
-export const initialState: Array<Todo> = [];
+export const initialState: Array<Todo> = [
+    {
+        id: 1,
+        text: 'Hello world!',
+        completed: false
+    },
+    {
+        id: 2,
+        text: 'The standard Lorem Ipsum passage, used since the 1500s\n',
+        completed: false
+    },
+    {
+        id: 3,
+        text: 'Section 1.10.32 of "de Finibus Bonorum et Malorum"',
+        completed: false
+    },
+    {
+        id: 4,
+        text: 'Section 1.10.33 of "de Finibus Bonorum et Malorum"',
+        completed: false
+    }
+];
 export const reducer = (state = initialState, action: TodoActions): Array<Todo> => {
     switch (action.type) {
         case TodoActionTypes.AddTodo:

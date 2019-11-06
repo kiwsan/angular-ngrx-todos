@@ -9,11 +9,11 @@ import {StoreModule} from '@ngrx/store';
 import {metaReducers, reducers} from './reducers';
 import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
-        AppComponent        
+        AppComponent
     ],
     imports: [
         // vendor modules
