@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - '10'
+sudo: required
+cache:
+  directories:
+    - $HOME/.npm
+before_install:
+  - echo 'before'
+install:
+  - npm install
+script:
+  # run build script specified in package.json
+  - npm run
+  # call script for deploying of produced artifacts
+after_success:
+  - echo 'success'
