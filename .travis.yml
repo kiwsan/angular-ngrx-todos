@@ -12,7 +12,7 @@ install:
   - npm install
 script:  
   - ng version
-  - ng deploy --repo=https://${GITHUB_TOKEN}@github.com/kiwsan/angular-ngrx-todo.git --base-href="https://kiwsan.github.io/angular-ngrx-todo/"
 after_success:
-  - echo 'success'
+  - ng deploy --repo=https://${GITHUB_TOKEN}@github.com/kiwsan/angular-ngrx-todo.git --base-href="https://kiwsan.github.io/angular-ngrx-todo/"
+
   
