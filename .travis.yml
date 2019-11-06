@@ -5,6 +5,9 @@ sudo: required
 cache:
   directories:
     - $HOME/.npm
+before_install:
+  - npm install -g @angular/cli
+  - npm install -g angular-cli-ghpages
 script:
   - npm install
 after_success:
