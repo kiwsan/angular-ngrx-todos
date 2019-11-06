@@ -125,7 +125,10 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
-          "options": {}
+          "options": {
+            "name": "Travis CI",
+            "email": "kiwsanthia@gmail.com"
+          }
         }
       }
     }
