@@ -1,5 +1,7 @@
 # angular-ngrx-todo
 
+[![Build Status](https://travis-ci.org/kiwsan/angular-ngrx-todo.svg?branch=master)](https://travis-ci.org/kiwsan/angular-ngrx-todo)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
 
 Work in progress
