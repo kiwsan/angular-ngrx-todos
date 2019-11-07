@@ -1,18 +1,24 @@
+dist: xenial
+sudo: false
+
 language: node_js
 node_js:
-  - '10'
-sudo: required
+  - "10"
+
 cache:
   directories:
-    - $HOME/.npm
-before_install:
-  - npm install -g @angular/cli
-  - npm install -g angular-cli-ghpages
+     - ./node_modules
+
 install:
   - npm install
-script:  
-  - ng version
-after_success:
-  - ng deploy --repo=https://${GITHUB_TOKEN}@github.com/kiwsan/angular-ngrx-todo.git --base-href="https://kiwsan.github.io/angular-ngrx-todo/"
 
-  
+script:
+  - npm run-script build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist/angular-ngrx-todo
+  on:
+    branch: master
