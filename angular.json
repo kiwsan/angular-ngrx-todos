@@ -49,6 +49,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "baseHref": "https://kiwsan.github.io/angular-ngrx-todo/",
               "budgets": [
                 {
                   "type": "initial",
