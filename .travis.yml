@@ -14,7 +14,9 @@ install:
 
 script:
   - npm run-script build
-
+  - cd dist/angular-ngrx-todo
+  - cp index.html 404.html
+  
 deploy:
   provider: pages
   skip_cleanup: true
