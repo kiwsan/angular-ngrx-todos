@@ -1,9 +1,10 @@
 export interface Todo {
-    id: number;
-    completed: boolean;
-    text: string;
+  id: number;
+  completed: boolean;
+  selected: boolean;
+  text: string;
 }
 
 export interface Todos {
-    todos: Array<Todo>;
+  todos: Array<Todo>;
 }

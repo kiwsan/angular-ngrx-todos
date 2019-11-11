@@ -1,6 +1,16 @@
 <mat-card *ngFor="let todo of todos | async" class="md_todo-item">
-    <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.completed" class="md__todo-toggle"></mat-checkbox>
-    <span (click)="onToggleTodo(todo)">
-            &nbsp;{{todo.text}}&nbsp;
-          </span>
+
+    <div class="float-left mt-2 mb-2">
+
+        <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.completed" class="md__todo-toggle"></mat-checkbox>
+        <span [style.textDecoration]="todo.selected?'line-through':'none'">&nbsp;{{todo.text}}&nbsp;</span>
+
+    </div>
+
+    <div class="float-right">
+        <app-lg-input-action *ngIf="todo.selected" faIcon="trash-alt"></app-lg-input-action>
+    </div>
+
+    <div class="clearfix"></div>
+
 </mat-card>

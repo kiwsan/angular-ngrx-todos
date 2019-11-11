@@ -1,7 +1,9 @@
 .md_todo-item {
-  margin-bottom: 1rem;
+    margin-bottom: 1rem;
 }
 
-.md__todo-toggle {
-
+.md_todo-item:hover {
+    background-color: #ccc9c9;
 }
+
+.md__todo-toggle {}
