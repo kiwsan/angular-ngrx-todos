@@ -1,35 +1,34 @@
-import {Action} from '@ngrx/store';
-import {Todo} from '../models/todo-model';
+import { Action } from "@ngrx/store";
+import { Todo } from "../models/todo-model";
+import { MockTodos } from './todo.mocks';
 
 export enum TodoActionTypes {
-    AddTodo = '[Todo] Add Todo',
-    ToggleTodo = '[Todo] Toggle Todo',
-    DeleteTodo = '[Todo] Delete Todo'
+  AddTodo = "[Todo] Add Todo",
+  ToggleTodo = "[Todo] Toggle Todo",
+  DeleteTodo = "[Todo] Delete Todo"
 }
 
-let currentId = 1;
+let currentId = MockTodos.length + 1;
 
 export class AddTodo implements Action {
-    readonly type = TodoActionTypes.AddTodo;
-    id: number;
+  readonly type = TodoActionTypes.AddTodo;
+  id: number;
 
-    constructor(public payload: Todo) {
-        payload.id = currentId++;
-    }
+  constructor(public payload: Todo) {
+    payload.id = currentId++;
+  }
 }
 
 export class ToggleTodo implements Action {
-    readonly type = TodoActionTypes.ToggleTodo;
+  readonly type = TodoActionTypes.ToggleTodo;
 
-    constructor(public payload: { id: number }) {
-    }
+  constructor(public payload: { id: number }) {}
 }
 
 export class DeleteTodo implements Action {
-    readonly type = TodoActionTypes.DeleteTodo;
+  readonly type = TodoActionTypes.DeleteTodo;
 
-    constructor(public payload: { id: number }) {
-    }
+  constructor(public payload: { id: number }) {}
 }
 
 export type TodoActions = AddTodo | ToggleTodo | DeleteTodo;

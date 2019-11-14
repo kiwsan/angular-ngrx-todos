@@ -7,7 +7,9 @@ import {
   MatChipsModule,
   MatIconModule,
   MatInputModule,
-  MatMenuModule
+  MatMenuModule,
+  MatSnackBarModule,
+  MatToolbarModule
 } from "@angular/material";
 
 import { XsInputComponent } from "./xs-input/xs-input/xs-input.component";
@@ -33,7 +35,9 @@ const Vendors = [
   MatIconModule,
   MatChipsModule,
   MatMenuModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatSnackBarModule,
+  MatToolbarModule
 ];
 
 const Components = [

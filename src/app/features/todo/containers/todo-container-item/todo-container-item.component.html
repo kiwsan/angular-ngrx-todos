@@ -1,9 +1,9 @@
-<mat-card *ngFor="let todo of todos | async" class="md_todo-item">
+<mat-card *ngFor="let todo of todos | async | visibleTodos:currentFilter" class="md_todo-item">
 
     <div class="float-left mt-2 mb-2">
 
-        <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.completed" class="md__todo-toggle"></mat-checkbox>
-        <span [style.textDecoration]="todo.selected?'line-through':'none'">&nbsp;{{todo.text}}&nbsp;</span>
+        <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.selected" class="md__todo-toggle"></mat-checkbox>
+        <span [style.textDecoration]="todo.selected?'line-through':'none'">&nbsp;{{todo.id}}&nbsp;{{todo.text}}&nbsp;</span>
 
     </div>
 

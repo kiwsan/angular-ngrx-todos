@@ -1,0 +1,8 @@
+<button [matMenuTriggerFor]="menu" class="md__filter-action" mat-icon-button>
+    <fa-icon class="fa-2x" icon="filter"></fa-icon>
+</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="onApplyFilter('SHOW_ALL');">All</button>
+    <button mat-menu-item (click)="onApplyFilter('SHOW_ACTIVE');">Active</button>
+    <button mat-menu-item (click)="onApplyFilter('SHOW_COMPLETED');">Completed</button>
+</mat-menu>
