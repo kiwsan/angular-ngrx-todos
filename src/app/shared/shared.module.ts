@@ -9,7 +9,9 @@ import {
   MatInputModule,
   MatMenuModule,
   MatSnackBarModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatCheckboxModule,
+  MatSlideToggleModule
 } from "@angular/material";
 
 import { XsInputComponent } from "./xs-input/xs-input/xs-input.component";
@@ -26,7 +28,6 @@ import {
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import { far } from "@fortawesome/free-regular-svg-icons";
 import { fab } from "@fortawesome/free-brands-svg-icons";
-import { MatCheckboxModule } from "@angular/material/checkbox";
 
 const Vendors = [
   MatButtonModule,
@@ -37,7 +38,8 @@ const Vendors = [
   MatMenuModule,
   MatCheckboxModule,
   MatSnackBarModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatSlideToggleModule
 ];
 
 const Components = [

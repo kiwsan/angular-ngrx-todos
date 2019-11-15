@@ -1,3 +1,6 @@
+// Sources:
+// https://github.com/tomastrajan/angular-ngrx-material-starter/blob/master/projects/angular-ngrx-material-starter/src/app/core/notifications/notification.service.ts
+
 import { Injectable, NgZone } from "@angular/core";
 import { MatSnackBar, MatSnackBarConfig } from "@angular/material";
 

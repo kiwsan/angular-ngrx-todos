@@ -22,8 +22,20 @@ const reducer = (state = initialState, action: TodoActions): Array<Todo> => {
         return {
           id: todo.id,
           text: todo.text,
-          completed: !todo.completed,
+          completed: todo.completed,
           selected: !todo.selected
+        };
+      });
+    case TodoActionTypes.DoneTodo:
+      return state.map(todo => {
+        if (todo.id !== action.payload.id) {
+          return todo;
+        }
+        return {
+          id: todo.id,
+          text: todo.text,
+          completed: !todo.completed,
+          selected: todo.selected
         };
       });
     case TodoActionTypes.DeleteTodo:

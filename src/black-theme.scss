@@ -1,0 +1,9 @@
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$angular-ngrx-todo-black-primary: mat-palette($mat-grey, 700, 300, 900);
+$angular-ngrx-todo-black-accent: mat-palette($mat-blue-grey, 400);
+// The warn palette is optional (defaults to red).
+$angular-ngrx-todo-black-warn: mat-palette($mat-red, 500);
+// Create the theme object (a Sass map containing all of the palettes).
+$angular-ngrx-todo-black-theme: mat-light-theme($angular-ngrx-todo-black-primary, $angular-ngrx-todo-black-accent, $angular-ngrx-todo-black-warn);

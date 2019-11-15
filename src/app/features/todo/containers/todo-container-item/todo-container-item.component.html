@@ -3,12 +3,13 @@
     <div class="float-left mt-2 mb-2">
 
         <mat-checkbox (change)="onToggleTodo(todo)" [checked]="todo.selected" class="md__todo-toggle"></mat-checkbox>
-        <span [style.textDecoration]="todo.selected?'line-through':'none'">&nbsp;{{todo.id}}&nbsp;{{todo.text}}&nbsp;</span>
+        <span [style.textDecoration]="todo.completed?'line-through':'none'">&nbsp;{{todo.id}}&nbsp;{{todo.text}}&nbsp;</span>
 
     </div>
 
     <div class="float-right">
-        <app-lg-input-action *ngIf="todo.selected" faIcon="trash-alt"></app-lg-input-action>
+        <app-lg-input-action (click)="onDone(todo)" *ngIf="todo.selected && !todo.completed" faIcon="check-square"></app-lg-input-action>
+        <app-lg-input-action (click)="onRemove(todo)" *ngIf="todo.selected" faIcon="trash-alt"></app-lg-input-action>
     </div>
 
     <div class="clearfix"></div>

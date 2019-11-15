@@ -31,12 +31,20 @@ export class TodoContainerItemComponent implements OnInit {
   }
 
   onToggleTodo(todo: Todo) {
-    this.store.dispatch(
-      new fromTodos.ToggleTodo({
-        id: todo.id
-      })
-    );
+    this.store.dispatch(new fromTodos.ToggleTodo({ id: todo.id }));
 
     this.notificationService.info("Toggle");
+  }
+
+  onDone(todo: Todo) {
+    this.store.dispatch(new fromTodos.DoneTodo({ id: todo.id }));
+
+    this.notificationService.info("Todo task has been done.");
+  }
+
+  onRemove(todo: Todo) {
+    this.store.dispatch(new fromTodos.DeleteTodo({ id: todo.id }));
+
+    this.notificationService.info("Removed");
   }
 }
