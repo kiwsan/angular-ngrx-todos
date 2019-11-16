@@ -1,12 +1,12 @@
-import { Action } from "@ngrx/store";
-import { Todo } from "../models/todo-model";
-import { MockTodos } from "./todo.mocks";
+import { Action } from '@ngrx/store';
+import { Todo } from '../models/todo-model';
+import { MockTodos } from './todo.mocks';
 
 export enum TodoActionTypes {
-  AddTodo = "[Todo] Add Todo",
-  ToggleTodo = "[Todo] Toggle Todo",
-  DeleteTodo = "[Todo] Delete Todo",
-  DoneTodo = "[Todo] Done Todo"
+  AddTodo = '[Todo] Add Todo',
+  ToggleTodo = '[Todo] Toggle Todo',
+  DeleteTodo = '[Todo] Delete Todo',
+  DoneTodo = '[Todo] Done Todo'
 }
 
 let currentId = MockTodos.length + 1;

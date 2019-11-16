@@ -1,16 +1,16 @@
-import { Component, OnInit } from "@angular/core";
-import { Todo } from "../../models/todo-model";
-import { Observable } from "rxjs";
-import { Store } from "@ngrx/store";
-import { TodosState } from "../../todo-state";
-import { getTodos, getCurrentFilter } from "../../todo-selectors";
-import * as fromTodos from "../../store/todo.actions";
-import { NotificationService } from "src/app/core/core.module";
+import { Component, OnInit } from '@angular/core';
+import { Todo } from '../../models/todo-model';
+import { Observable } from 'rxjs';
+import { Store } from '@ngrx/store';
+import { TodosState } from '../../todo-state';
+import { getTodos, getCurrentFilter } from '../../todo-selectors';
+import * as fromTodos from '../../store/todo.actions';
+import { NotificationService } from 'src/app/core/core.module';
 
 @Component({
-  selector: "app-todo-container-item",
-  templateUrl: "./todo-container-item.component.html",
-  styleUrls: ["./todo-container-item.component.scss"]
+  selector: 'app-todo-container-item',
+  templateUrl: './todo-container-item.component.html',
+  styleUrls: ['./todo-container-item.component.scss']
 })
 export class TodoContainerItemComponent implements OnInit {
   currentFilter;
@@ -22,9 +22,9 @@ export class TodoContainerItemComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    //items
+    // items
     this.todos = this.store.select(getTodos);
-    //filters
+    // filters
     this.store.select(getCurrentFilter).subscribe(filter => {
       this.currentFilter = filter;
     });
@@ -33,18 +33,18 @@ export class TodoContainerItemComponent implements OnInit {
   onToggleTodo(todo: Todo) {
     this.store.dispatch(new fromTodos.ToggleTodo({ id: todo.id }));
 
-    this.notificationService.info("Toggle");
+    this.notificationService.info('Toggle');
   }
 
   onDone(todo: Todo) {
     this.store.dispatch(new fromTodos.DoneTodo({ id: todo.id }));
 
-    this.notificationService.info("Todo task has been done.");
+    this.notificationService.info('Todo task has been done.');
   }
 
   onRemove(todo: Todo) {
     this.store.dispatch(new fromTodos.DeleteTodo({ id: todo.id }));
 
-    this.notificationService.info("Removed");
+    this.notificationService.info('Removed');
   }
 }

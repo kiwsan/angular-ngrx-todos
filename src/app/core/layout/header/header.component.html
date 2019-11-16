@@ -1,5 +1,29 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
-        <span>The Notes</span>
+        <span>The Note</span>
+        <span class="md__spacer"></span>
+
+        <button mat-button [matMenuTriggerFor]="menu"><fa-icon icon="palette"></fa-icon></button>
+        <mat-menu #menu="matMenu">
+            <mat-grid-list cols="2" rowHeight="2:2">
+                <mat-grid-tile (click)="onSetTheme('default-theme')">
+                    <button mat-button matRipple [matRippleCentered]="true">
+                        Default
+                    </button>
+                </mat-grid-tile>
+                <mat-grid-tile (click)="onSetTheme('black-theme')">
+                    <button mat-button matRipple [matRippleCentered]="true">
+                        Dark
+                    </button>
+                </mat-grid-tile>
+                <mat-grid-tile (click)="onSetTheme('light-theme')">
+                    <button mat-button matRipple [matRippleCentered]="true">
+                        Light
+                    </button>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </mat-menu>
+
+        <fa-icon class="md__menu-button" icon="ellipsis-v"></fa-icon>
     </mat-toolbar-row>
 </mat-toolbar>

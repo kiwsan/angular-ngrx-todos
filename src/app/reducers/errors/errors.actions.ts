@@ -1,7 +1,7 @@
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
 export enum ErrorsActionTypes {
-  SetError = "[Errors] Set error"
+  SetError = '[Errors] Set error'
 }
 
 export class SetError implements Action {

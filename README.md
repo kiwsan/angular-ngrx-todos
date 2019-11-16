@@ -8,6 +8,30 @@ Work in progress
 
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular8-ngrx-todo)
 
+## Schematics
+
+The schematics for the above create functions are ready to use but are currently opt-in. To use them, use the creators flag:
+
+`
+ng generate @ngrx/schematics:action ActionName --creators
+`
+
+`
+ng generate @ngrx/schematics:reducer ReducerName --creators
+`
+
+`
+ng generate @ngrx/schematics:effect EffectName --creators
+`
+
+`
+ng generate @ngrx/schematics:entity EntityName --creators
+`
+
+`
+ng generate @ngrx/schematics:feature FeatureName --creators
+`
+
 ## References
 [Reactive State for Angular](https://ngrx.io/)
 

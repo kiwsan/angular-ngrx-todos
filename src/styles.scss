@@ -12,7 +12,7 @@
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($angular-ngrx-todo-black-theme);
+//@include angular-material-theme($angular-ngrx-todo-theme);
 .default-theme {
     @include angular-material-theme($angular-ngrx-todo-theme);
 }
@@ -24,7 +24,6 @@
 .black-theme {
     @include angular-material-theme($angular-ngrx-todo-black-theme);
 }
-
 
 /* You can add global styles to this file, and also import other style files */
 

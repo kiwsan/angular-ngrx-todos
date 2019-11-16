@@ -1,7 +1,7 @@
-import { Action } from "@ngrx/store";
+import { Action } from '@ngrx/store';
 
 export enum CurrentFilterActionTypes {
-  SetCurrentFilter = "[Filter] Set current filter"
+  SetCurrentFilter = '[Filter] Set current filter'
 }
 
 export class SetCurrentFilter implements Action {
