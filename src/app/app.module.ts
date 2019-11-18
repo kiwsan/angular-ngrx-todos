@@ -11,13 +11,11 @@ import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ComponentsComponent } from './features/components/components.component';
 import { TemplatesComponent } from './features/templates/templates.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        ComponentsComponent,
         TemplatesComponent
     ],
     imports: [
