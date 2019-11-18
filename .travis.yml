@@ -14,13 +14,13 @@ install:
 
 script:
   - npm run-script build
-  - cd dist/angular-ngrx-todo
+  - cd dist/angular-ngrx-todos
   - cp index.html 404.html
   
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/angular-ngrx-todo
+  local_dir: dist/angular-ngrx-todos
   on:
     branch: master
