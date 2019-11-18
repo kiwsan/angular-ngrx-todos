@@ -1,25 +1,38 @@
-import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import { NgModule } from "@angular/core";
+import { RouterModule, Routes, PreloadAllModules } from "@angular/router";
 
 const routes: Routes = [
-    {
-        path: '',
-        redirectTo: 'todo',
-        pathMatch: 'full',
-    },
-    {
-        path: 'todo',
-        loadChildren: () => import('./features/todo/todo.module').then(m => m.TodoModule),
-    },
-    {
-        path: '**',
-        redirectTo: 'todo',
-    },
+  {
+    path: "",
+    redirectTo: "todos",
+    pathMatch: "full"
+  },
+  {
+    path: "todos",
+    loadChildren: () =>
+      import("./features/todo/todo.module").then(m => m.TodoModule)
+  },
+  {
+    path: "templates",
+    loadChildren: () =>
+      import("./features/templates/templates.module").then(
+        m => m.TemplatesModule
+      )
+  },
+  {
+    path: "**",
+    redirectTo: "todos"
+  }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes, {
+      useHash: false,
+      scrollPositionRestoration: "enabled",
+      preloadingStrategy: PreloadAllModules
+    })
+  ],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

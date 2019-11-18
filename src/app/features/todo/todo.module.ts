@@ -1,7 +1,7 @@
 import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoComponent } from './todo.component';
-import { HomeRoutingModule } from './todo-routing.module';
+import { TodosRoutingModule } from './todo-routing.module';
 import { TodoContainerEditorComponent } from './containers/todo-container-editor/todo-container-editor.component';
 import { TodoContainerItemComponent } from './containers/todo-container-item/todo-container-item.component';
 import { FEATURE_NAME, reducers } from './todo-state';
@@ -11,7 +11,6 @@ import { TodoContainerFilterComponent } from './containers/todo-container-filter
 import { VisibleTodosPipe } from 'src/app/reducers/filter/filter.pipe';
 
 @NgModule({
-  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
     TodoComponent,
     TodoContainerEditorComponent,
@@ -24,7 +23,7 @@ import { VisibleTodosPipe } from 'src/app/reducers/filter/filter.pipe';
     // vendor
     CommonModule,
     // local
-    HomeRoutingModule,
+    TodosRoutingModule,
     StoreModule.forFeature(FEATURE_NAME, reducers),
     SharedModule
   ]
