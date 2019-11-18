@@ -10,10 +10,15 @@ import {metaReducers, reducers} from './reducers/app.state';
 import {EffectsModule} from '@ngrx/effects';
 import {AppEffects} from './app.effects';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ComponentsComponent } from './features/components/components.component';
+import { TemplatesComponent } from './features/templates/templates.component';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        ComponentsComponent,
+        TemplatesComponent
     ],
     imports: [
         // vendor modules
@@ -31,6 +36,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         }),
         EffectsModule.forRoot([AppEffects]),
         BrowserAnimationsModule,
+        FormsModule,
+        ReactiveFormsModule 
     ],
     providers: [],
     bootstrap: [AppComponent]

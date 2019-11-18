@@ -11,7 +11,9 @@ import {
   MatSnackBarModule,
   MatToolbarModule,
   MatCheckboxModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatSidenavModule,
+  MatListModule
 } from "@angular/material";
 
 import { XsInputComponent } from "./xs-input/xs-input/xs-input.component";
@@ -39,7 +41,9 @@ const Vendors = [
   MatCheckboxModule,
   MatSnackBarModule,
   MatToolbarModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  MatSidenavModule,
+  MatListModule
 ];
 
 const Components = [

@@ -4,6 +4,7 @@ import {TodosState} from './todo-state';
 import {Observable} from 'rxjs';
 import {BaseError} from 'src/app/reducers/errors/errors.model';
 import {getErrors} from './todo-selectors';
+import { ROUTE_ANIMATIONS_ELEMENTS } from 'src/app/core/animations/route.animations';
 
 @Component({
     selector: 'app-todo',
@@ -11,6 +12,7 @@ import {getErrors} from './todo-selectors';
     styleUrls: ['./todo.component.scss']
 })
 export class TodoComponent implements OnInit {
+    routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
     errors: Observable<Array<BaseError>>;
 
     constructor(private store: Store<TodosState>) {

@@ -1,7 +1,34 @@
 .md__spacer {
-  flex: 1 1 auto;
+    flex: 1 1 auto;
 }
 
 .md__menu-button {
-  padding: 0 14px;
+    padding: 0 14px;
+}
+
+.md__circle {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(187, 33, 33);
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.md__default {
+    background-color: #3f51b5;
+}
+
+.md__dark {
+    background-color: #616161;
+}
+
+.md__light {
+    background-color: #eeeeee;
+}
+
+.md__page-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
 }

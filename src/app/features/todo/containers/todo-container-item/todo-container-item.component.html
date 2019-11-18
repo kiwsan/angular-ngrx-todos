@@ -1,4 +1,4 @@
-<mat-card *ngFor="let todo of todos | async | visibleTodos:currentFilter" class="md_todo-item">
+<mat-card *ngFor="let todo of todos | async | visibleTodos:currentFilter" [ngClass]="routeAnimationsElements" class="md_todo-item">
 
     <div class="float-left mt-2 mb-2">
 

@@ -1,4 +1,4 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" class="md__page-header">
     <mat-toolbar-row>
         <span>The Note</span>
         <span class="md__spacer"></span>
@@ -8,17 +8,17 @@
             <mat-grid-list cols="2" rowHeight="2:2">
                 <mat-grid-tile (click)="onSetTheme('default-theme')">
                     <button mat-button matRipple [matRippleCentered]="true">
-                        Default
+                        <span class="md__circle md__default"></span>
                     </button>
                 </mat-grid-tile>
                 <mat-grid-tile (click)="onSetTheme('black-theme')">
                     <button mat-button matRipple [matRippleCentered]="true">
-                        Dark
+                        <span class="md__circle md__dark"></span>
                     </button>
                 </mat-grid-tile>
                 <mat-grid-tile (click)="onSetTheme('light-theme')">
                     <button mat-button matRipple [matRippleCentered]="true">
-                        Light
+                        <span class="md__circle md__light"></span>
                     </button>
                 </mat-grid-tile>
             </mat-grid-list>

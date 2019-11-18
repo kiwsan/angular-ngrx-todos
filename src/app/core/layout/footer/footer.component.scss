@@ -1,25 +1,18 @@
 .md__page-footer {
-  margin-top: 1rem;
-  height: 6.5rem;
-  padding-top: 1.5rem;
-  text-align: center;
-  background-color: #3f51b5;
-  color: white;
-
-  a {
-    padding: 0 12px 0 0;
+    margin-top: 1rem;
+    height: 6.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+    background-color: #3f51b5;
     color: white;
-
-    span {
-      padding-left: 4px;
+    a {
+        padding: 0 12px 0 0;
+        color: white;
+        span {
+            padding-left: 4px;
+        }
     }
-  }
-
-  a:hover {
-    text-decoration: none;
-  }
-
-  p {
-
-  }
+    a:hover {
+        text-decoration: none;
+    }
 }

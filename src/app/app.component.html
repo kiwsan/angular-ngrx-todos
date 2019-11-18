@@ -1,7 +1,29 @@
-<app-header></app-header>
+<ng-container>
+    <app-header></app-header>
 
-<main class="container wrapper">
-    <router-outlet></router-outlet>
-</main>
+    <mat-sidenav-container class="md__container">
+        <!-- Sidenav -->
+        <mat-sidenav #sidenav mode="side" opened class="md__sidenav" [fixedInViewport]="options.value.fixed">
+            <mat-nav-list>
+                <a mat-list-item>
+                    <fa-icon icon="list-ul" class="mr-2"></fa-icon> Todos
+                </a>
+                <a mat-list-item>
+                    <fa-icon icon="align-right" class="mr-2"></fa-icon> Components
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
 
-<app-footer></app-footer>
+        <!-- Main content -->
+        <mat-sidenav-content>
+
+            <main class="container wrapper">
+                <div [@routeAnimations]="o.isActivated && o.activatedRoute.routeConfig.data && o.activatedRoute.routeConfig.data.title">
+                    <router-outlet #o="outlet"></router-outlet>
+                </div>
+            </main>
+
+            <app-footer></app-footer>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</ng-container>
