@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-ngrx-todo": {
+    "angular-ngrx-todos": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-ngrx-todo",
+            "outputPath": "dist/angular-ngrx-todos",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -49,7 +49,7 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "baseHref": "https://kiwsan.github.io/angular-ngrx-todo/",
+              "baseHref": "https://kiwsan.github.io/angular-ngrx-todos/",
               "budgets": [
                 {
                   "type": "initial",
@@ -68,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-ngrx-todo:build"
+            "browserTarget": "angular-ngrx-todos:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-ngrx-todo:build:production"
+              "browserTarget": "angular-ngrx-todos:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-ngrx-todo:build"
+            "browserTarget": "angular-ngrx-todos:build"
           }
         },
         "test": {
